@@ -45,9 +45,8 @@ end
 
 def select_character_names_and_number_of_books_they_are_in
   <<-DOC
-  SELECT characters.name, books.title AS book_appearances from characters
+  SELECT characters.name, SUM(book.id) AS book_appearances from characters
   JOIN books ON books.series_id = characters.series_id
-  GROUP BY characters.name
-  ORDER BY book_appearances DESC
+
   DOC
 end
