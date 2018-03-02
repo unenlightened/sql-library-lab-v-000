@@ -47,5 +47,6 @@ def select_character_names_and_number_of_books_they_are_in
   <<-DOC
   SELECT characters.name, COUNT(*) from character_books
   JOIN characters ON characters.id = character_books.character_id
+  GROUP BY characters.name
   DOC
 end
