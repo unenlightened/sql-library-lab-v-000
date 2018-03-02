@@ -45,6 +45,6 @@ end
 
 def select_character_names_and_number_of_books_they_are_in
   <<-DOC
-  SELECT characters.name, COUNT(*) from characters_books
+  SELECT characters.name, COUNT(*) from character_books
   DOC
 end
